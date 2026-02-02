@@ -242,20 +242,18 @@ if all_skill_ids:
         st.write(f"skill_id: `{edit_id}`")
         new_label = st.text_input("表示名（UIに出したい名前）", value=current_label, key="edit_skill_label")
 
-        if st.button("この戦法の表示名を保存"):
-            for s in skills_list:
-                if s.get("skill_id") == edit_id:
-                    s["display_name"] = new_label
-                    break
-            save_json(SKILLS_PATH, skills_list)
-            st.success("skills.json に保存しました。再読み込みして反映されます。")
-           st.rerun()
+if st.button("この戦法の表示名を保存"):
+    for s in skills_list:
+        if s.get("skill_id") == edit_id:
+            s["display_name"] = new_label
+            break
+    save_json(SKILLS_PATH, skills_list)
+    st.success("skills.json に保存しました。再読み込みして反映されます。")
+    st.rerun()
 else:
     st.info("skills.json に戦法がありません。")
 
-
 st.divider()
-
 
 # ---------- 既存の戦法数値 編集（proc / rate） ----------
 st.header("戦法データ（proc / rate の簡易編集）")
