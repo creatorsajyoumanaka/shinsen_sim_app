@@ -1,0 +1,12 @@
+{
+  "max_turns": 8,
+  "physical_scale": 20.0,
+  "strategy_scale": 22.0,
+  "heal_scale": 18.0,
+  "random_min": 0.95,
+  "random_max": 1.05,
+  "defense_factor_physical": 0.7,
+  "defense_factor_strategy": 0.8,
+  "attack_mix_lea": 0.5,
+  "confusion_skip_action": true
+}
